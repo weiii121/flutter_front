@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:project_1126/connected.dart';
 
 class SettingPage extends StatelessWidget {
   const SettingPage({super.key});
@@ -18,61 +19,39 @@ class MyListViewPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Drawer(
-      child: ListView(
-        children: const [
-          ListTile(
-            //style: ,
-            title: Text(
-                '1',
-              textAlign: TextAlign.center,
-              style:TextStyle(
-
-              )
-
-            ),
+    return Scaffold(
+       appBar: AppBar(
+         title: const Text("Setting Page"),
+         centerTitle: true,
+         backgroundColor: Colors.grey,
+         leading: IconButton(
+            icon: const Icon(Icons.arrow_back_ios),
+            tooltip: 'BackToHomePage',
+            onPressed: () {
+              Get.to(const ConnectedPage());
+            },
           ),
-        ],
-      ),
+         ),
+        body: ListView(
+            children: const [
+
+            ],
+          ),
+
+
     );
-    /*return Scaffold(
-      backgroundColor: Colors.deepPurple[100],
-      body: ListView(
-        children: const [
-          InkWell(
-            //onTap: () {},
-            child: ListTile(
-              title: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Icon(Icons.color_lens_outlined),
-                  SizedBox(width: 8),
-                  Text(
-                    'Change environment color',
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              ),
-            ),
-          ),
-          ListTile(
-            title: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                //Icon(Icons.)
-              ],
-            ),
-          ),
-          ListTile(
-              title: Text(
-            'Item 3',
-            textAlign: TextAlign.center,
-          )),
-          // 添加更多的列表项
-        ],
-      ),
-    );*/
+
   }
 }
+
+class ChangeColor extends StatelessWidget {
+  const ChangeColor({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const ListTile(
+
+    );
+  }
+}
+

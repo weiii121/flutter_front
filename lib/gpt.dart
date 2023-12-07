@@ -10,22 +10,24 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('My App'),
+          title: const Text('My App'),
+          centerTitle: true,
         ),
-        body: Center(
+        body: const Center(
           child:Column(
-            //mainAxisAlignment: MainAxisAlignment.center, // 在水平方向上置中
+            //mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(height: 50),
-              MyWidget1(),
+              Temperature(),
               SizedBox(height: 50),
               MyWidget2(),
               SizedBox(height: 50),
               MyWidget3(),
-              // 添加更多小部件...
             ],
           ),
         ),
@@ -34,7 +36,9 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyWidget1 extends StatelessWidget {
+class Temperature extends StatelessWidget {
+  const Temperature({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -44,14 +48,26 @@ class MyWidget1 extends StatelessWidget {
       ),
       height: 150,
       width: 400,
-      child: Center(
-        child: Text('Widget 1'),
-      ),
+      child: const Temperature_index(),
     );
   }
 }
 
+class Temperature_index extends StatelessWidget {
+  const Temperature_index({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Row(
+      children: [
+
+      ],
+    );
+  }
+}
 class MyWidget2 extends StatelessWidget {
+  const MyWidget2({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -61,7 +77,7 @@ class MyWidget2 extends StatelessWidget {
       ),
       height: 150,
       width: 400,
-      child: Center(
+      child: const Center(
         child: Text('Widget 2'),
       ),
     );
@@ -69,6 +85,8 @@ class MyWidget2 extends StatelessWidget {
 }
 
 class MyWidget3 extends StatelessWidget {
+  const MyWidget3({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -78,7 +96,7 @@ class MyWidget3 extends StatelessWidget {
       ),
       height: 150,
       width: 400,
-      child: Center(
+      child: const Center(
         child: Text('Widget 3'),
       ),
     );
