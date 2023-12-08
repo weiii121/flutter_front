@@ -30,7 +30,7 @@ class MyListViewPage extends StatelessWidget {
             icon: const Icon(Icons.arrow_back_ios),
             tooltip: 'BackToHomePage',
             onPressed: () {
-              Get.to(const CubeTest());
+              Get.to(const CubeTest(),transition: Transition.leftToRight);
             },
           ),
          ),

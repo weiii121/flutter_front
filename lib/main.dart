@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:project_1126/connected.dart';
 import 'package:get/get.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         //colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      defaultTransition: Transition.circularReveal,
+      //defaultTransition: Transition.fade,
       getPages: AppPages.pages,
       home: const ConnectPage(),
     );
@@ -89,10 +90,8 @@ class ConnectPage extends StatelessWidget {
             const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
-                //Get.to(const ConnectedPage());// Previous page
-                Get.to(const CubeTest()); //To test my tappable cub
-                //Navigator.of(context).push(
-                    //MaterialPageRoute(builder: (context) => const ConnectedPage()));
+                Get.to(const CubeTest(),transition: Transition.fadeIn); //To test my tappable cub
+
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.grey[900],

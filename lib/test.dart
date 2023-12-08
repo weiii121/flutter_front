@@ -28,7 +28,7 @@ class CubeTest extends StatelessWidget {
               icon: const Icon(Icons.settings),
               tooltip: 'Search',
               onPressed: () {
-                Get.to(const SettingPage());
+                Get.to(const SettingPage(),transition: Transition.fadeIn);
               },
             ),
           ],
@@ -67,7 +67,7 @@ class TappableCube_Temp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Get.to(const TemperaturePage());
+        Get.to(const TemperaturePage(),transition: Transition.fadeIn);
       },
       child: Container(
         height: 150,
@@ -89,7 +89,7 @@ class TappableCube_HeartBeat extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Get.to(const HeartBeatPage());
+        Get.to(const HeartBeatPage(),transition: Transition.fadeIn);
       },
       child: Container(
         height: 150,

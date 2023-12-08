@@ -19,7 +19,7 @@ class HeartBeatPage extends StatelessWidget {
             icon: const Icon(Icons.arrow_back_ios_new),
             tooltip: 'Search',
             onPressed: () {
-              Get.to(const CubeTest());
+              Get.to(const CubeTest(),transition: Transition.leftToRight);
             },
           ),
           title: const Text("HeartBeatPage"),
