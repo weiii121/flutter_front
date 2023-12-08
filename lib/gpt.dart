@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(MyApp());
 }
-
-
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -77,8 +75,18 @@ class MyWidget2 extends StatelessWidget {
       ),
       height: 150,
       width: 400,
-      child: const Center(
-        child: Text('Widget 2'),
+      child:  Center(
+        child:  ListTile(
+          onTap: (){
+
+          },
+
+          contentPadding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
+          title: const  Align(
+            alignment: Alignment.center,
+            child: Icon(Icons.dark_mode),
+          ),
+        ),
       ),
     );
   }
